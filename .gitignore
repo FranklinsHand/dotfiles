@@ -1,0 +1,38 @@
+# https://github.com/jlengstorf/dotfiles/blob/main/.gitignore
+
+# Ignore everything...
+/*
+
+# ...except for these lil’ buddies...
+!/.gitignore
+!/.bash_profile
+!/.bashrc
+!/.js
+.js/node_modules
+!/.zshrc
+!/.bash_completion
+!/.bash_prompt
+!/.gatsby_shortlinks.sh
+!README.md
+!start.sh
+
+# starship config (https://starship.rs)
+!.config/
+.config/*
+!.config/starship.toml
+
+# ...and my VS Code settings...
+!.vscode/
+.vscode/*
+!.vscode/settings.json
+
+# ...and my custom VS Code settings for screencasting.
+.code_profiles/screencast/*
+!.code_profiles/screencast/data
+.code_profiles/screencast/data/*
+!.code_profiles/screencast/data/User
+.code_profiles/screencast/data/User/*
+!.code_profiles/screencast/data/User/settings.json
+
+# Local Netlify folder
+.netlify

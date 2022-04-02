@@ -1,3 +1,5 @@
+read -p "Enter your name : " myName
+read -p "Enter your email : " myEmail
 
 #install NVM
 echo installing NVM
@@ -49,9 +51,15 @@ echo font added and cache cleared
 echo isntalling syncthing
 sudo dnf install syncthing
 
+#Git Identity
+echo Adding git identity
+git config --global user.name "$myName"
+git config --global user.email $myEmail
+
+
 # create a new ssh key
 echo Generating SSH Keys
-ssh-keygen -t ed25519 -C "jalexpearson@protonmail.com"
+ssh-keygen -t ed25519 -C "$myEmail"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 
